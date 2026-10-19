@@ -11,12 +11,23 @@ const transactionRoutes = require("./src/routes/transactionRoutes");
 const app = express();
 
 // Middleware
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://expense-tracker-web-application-2.onrender.com",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS: " + origin));
+      }
+    },
   })
 );
-
 app.use(express.json());
 
 // Health check
