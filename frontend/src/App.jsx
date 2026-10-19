@@ -318,7 +318,7 @@ export default function App() {
             </span>
 
             <span className="brand-name">
-              pocketwise
+              Expense Tracker
               <small>PERSONAL FINANCE</small>
             </span>
           </div>
@@ -457,7 +457,7 @@ export default function App() {
           </span>
 
           <span className="brand-name">
-            pocketwise
+            Expense Tracker
             <small>PERSONAL FINANCE</small>
           </span>
         </div>
