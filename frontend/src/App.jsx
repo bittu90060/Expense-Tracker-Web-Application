@@ -28,9 +28,12 @@ import {
 import "./styles.css";
 
 
+
 const API = (
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+  import.meta.env.VITE_API_URL ||
+  "https://expense-tracker-web-application-1-cura.onrender.com/api"
 ).replace(/\/$/, "");
+
 
 const COLORS = [
   "#6558f5", "#16a673", "#f59e0b", "#ed5572",
